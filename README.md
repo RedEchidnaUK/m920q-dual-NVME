@@ -17,7 +17,7 @@ M920Q, M920X and M720Q are using same board model.
 
 ## TLDR
 M920q -- one M.2 NVME drive in original (white) slot, and one M.2 NVME drive in soldered slot. <br>
-M720q -- one M.2 NVME drive in original (white) slot, and one M.2 SATA drive in soldered slot ![confirmed](https://github.com/badger707/m920q-dual-NVME/issues/4#issuecomment-1706374243).
+M720q -- one M.2 NVME drive in original (white) slot, and one M.2 SATA drive in soldered slot [confirmed](https://github.com/badger707/m920q-dual-NVME/issues/4#issuecomment-1706374243).
 <br><br>
 
 ## DISCLAIMER
@@ -83,13 +83,13 @@ Note on R639
 * ### Components list summary:
 | Type | Size | Value | Voltage | Count | Mouser links |
 |-----------|-------|--------|----------|---|------|
-| Capacitor | 0402 | 0.01uF | 25V7-K | 4 | ![581-04023D103KAT2A](https://www.mouser.ie/ProductDetail/581-04023D103KAT2A)|
-| Capacitor | 0402 | 0.1uF | 16V7-K | 2 | ![581-0402YD104K](https://www.mouser.ie/ProductDetail/581-0402YD104K)|
-| Capacitor | 0402 | 0.22uF | 25V7-K | 8 | ![581-0402YC224KAT2A](https://www.mouser.ie/ProductDetail/581-0402YC224KAT2A)|
-| Capacitor | 0603 | 10uF | 6.3V6-M | 2 | ![810-C1608X5R0J106K ](https://www.mouser.ie/ProductDetail/810-C1608X5R0J106K)|
-| Resistor | 0402 | 0 ohm | - | 8 | ![603-RC0402FR-070RL](https://www.mouser.ie/ProductDetail/603-RC0402FR-070RL)|
-| Resistor | 0402 | 10 Kohm | - | 1 | ![71-RCC040210K0FKED](https://www.mouser.ie/ProductDetail/71-RCC040210K0FKED)|
-| Resistor | 0402 | 33 ohm | - | 1 | ![71-CRCW040233R0FKEDC](https://www.mouser.ie/ProductDetail/71-CRCW040233R0FKEDC)|
+| Capacitor | 0402 | 0.01uF | 25V7-K | 4 | [581-04023D103KAT2A](https://www.mouser.ie/ProductDetail/581-04023D103KAT2A)|
+| Capacitor | 0402 | 0.1uF | 16V7-K | 2 | [581-0402YD104K](https://www.mouser.ie/ProductDetail/581-0402YD104K)|
+| Capacitor | 0402 | 0.22uF | 25V7-K | 8 | [581-0402YC224KAT2A](https://www.mouser.ie/ProductDetail/581-0402YC224KAT2A)|
+| Capacitor | 0603 | 10uF | 6.3V6-M | 2 | [810-C1608X5R0J106K ](https://www.mouser.ie/ProductDetail/810-C1608X5R0J106K)|
+| Resistor | 0402 | 0 ohm | - | 8 | [603-RC0402FR-070RL](https://www.mouser.ie/ProductDetail/603-RC0402FR-070RL)|
+| Resistor | 0402 | 10 Kohm | - | 1 | [71-RCC040210K0FKED](https://www.mouser.ie/ProductDetail/71-RCC040210K0FKED)|
+| Resistor | 0402 | 33 ohm | - | 1 | [71-CRCW040233R0FKEDC](https://www.mouser.ie/ProductDetail/71-CRCW040233R0FKEDC)|
 | M.2 NVME connector | 3.2mm/4.2mm | - | - | 1 | see useful link section |
 | M.2 NVME plastic retention clip | - | - | - | 1 | see useful links section |
 
@@ -111,7 +111,7 @@ Note on R639
 ![](/pictures/m720q_pch_jump.jpeg)
 <br>
 Note on above M720Q picture components location:
-> According to this ![post](https://github.com/badger707/m920q-dual-NVME/issues/4#issuecomment-1706272665) soldered M.2 slot will work with M.2 SATA drive only.
+> According to this [post](https://github.com/badger707/m920q-dual-NVME/issues/4#issuecomment-1706272665) soldered M.2 slot will work with M.2 SATA drive only.
 
 <br><br>
 * ### Component location - BOTTOM side of the board
@@ -277,7 +277,7 @@ See badger707/m920q-dual-NVME/issues/12 for further discussion of this issue.
 # FINAL NOTES
 
 As you can see, we can convert m920Q and add second M.2 NVME drive, this is exactly same as m920X.<br>
-For m720Q -- according to this ![post](https://github.com/badger707/m920q-dual-NVME/issues/4#issuecomment-1706272665) soldered M.2 slot will work with M.2 SATA drive only.<br>
+For m720Q -- according to this [post](https://github.com/badger707/m920q-dual-NVME/issues/4#issuecomment-1706272665) soldered M.2 slot will work with M.2 SATA drive only.<br>
 Budget/cost - under 20EUR for all SMD components and edge connector.<br>
 This hardware mod is not difficult but requires proper tools and good experience with soldering.<br>
 I hope this will be usefull.<br><br>
