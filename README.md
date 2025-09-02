@@ -1,6 +1,6 @@
 # m920q-dual-NVME
 
-![Lenovo M920Q](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/20180508_lenovo_tiny.jpg)
+![Lenovo M920Q](/pictures/20180508_lenovo_tiny.jpg)
 
 Goal of this personal project is to add 2nd M.2 NVME drive to Lenovo M920Q (M.2 SATA for M720Q) Tiny by soldering missing SMD components to the board.
 
@@ -74,6 +74,10 @@ By comparing my visual findings with schematics and "board view", I was able to 
 Note on M.2 NVME edge connector:
 > I have used 4.2mm height connector (Gen5, expensive), however 3.2mm from Gen3/4 would be recommended (cheaper), see link bellow.
 
+\
+Note on R639
+> Some boards do not require this resistor. Either it is already present on the board or there is a PCB trace in its place.
+
 <br>
 
 * ### Components list summary:
@@ -84,7 +88,7 @@ Note on M.2 NVME edge connector:
 | Capacitor | 0402 | 0.22uF | 25V7-K | 8 | ![581-0402YC224KAT2A](https://www.mouser.ie/ProductDetail/581-0402YC224KAT2A)|
 | Capacitor | 0603 | 10uF | 6.3V6-M | 2 | ![810-C1608X5R0J106K ](https://www.mouser.ie/ProductDetail/810-C1608X5R0J106K)|
 | Resistor | 0402 | 0 ohm | - | 8 | ![603-RC0402FR-070RL](https://www.mouser.ie/ProductDetail/603-RC0402FR-070RL)|
-| Resistor | 0402 | 10 Kohm | - | 2 | ![71-RCC040210K0FKED](https://www.mouser.ie/ProductDetail/71-RCC040210K0FKED)|
+| Resistor | 0402 | 10 Kohm | - | 1 | ![71-RCC040210K0FKED](https://www.mouser.ie/ProductDetail/71-RCC040210K0FKED)|
 | Resistor | 0402 | 33 ohm | - | 1 | ![71-CRCW040233R0FKEDC](https://www.mouser.ie/ProductDetail/71-CRCW040233R0FKEDC)|
 | M.2 NVME connector | 3.2mm/4.2mm | - | - | 1 | see useful link section |
 | M.2 NVME plastic retention clip | - | - | - | 1 | see useful links section |
@@ -95,16 +99,16 @@ Note on M.2 NVME edge connector:
 * ### Components location for M920Q and M720Q - TOP side of the board<br>
 
 9 components on the Left side of SATA port, highlighted in green:<br>
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/IMG_5877_x.png)
+![](/pictures/IMG_5877_x.png)
 <br><br>
 12 components on the Right side of SATA port, highlighted in green:<br>
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/IMG_5878_x.png)
+![](/pictures/IMG_5878_x.png)
 <br><br>
 <b>For M920Q</b> -- move resistor from R150 to R162. This will switch PCH to work in M920X mode:
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/IMG_5883_x.png)
+![](/pictures/IMG_5883_x.png)
 <br><br>
 <b>For M720Q</b> -- move resistor from R151 to R157. This will switch PCH to work in M920X mode:
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/m720q_pch_jump.jpeg)
+![](/pictures/m720q_pch_jump.jpeg)
 <br>
 Note on above M720Q picture components location:
 > According to this ![post](https://github.com/badger707/m920q-dual-NVME/issues/4#issuecomment-1706272665) soldered M.2 slot will work with M.2 SATA drive only.
@@ -113,7 +117,7 @@ Note on above M720Q picture components location:
 * ### Component location - BOTTOM side of the board
 
 Only 4 capacitors at the side of NVME connector pads, highlighted in green:<br>
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/IMG_5885_x.png)
+![](/pictures/IMG_5885_x.png)
 <br>
 > Ignore RC27 highlighting in above picture.<br>
 
@@ -126,37 +130,37 @@ Only 4 capacitors at the side of NVME connector pads, highlighted in green:<br>
 Now that we know location of all components, its time to solder them, one by one...
 
 First we need to prep the pads -- clean all pads from factory solder using flux and desoldering braid...:<br>
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/IMG_5888_.PNG)
+![](/pictures/IMG_5888_.PNG)
 
 4 caps placed on NVME power rail (yeah, I know they're not perfectly soldered, dont care, works for me)<br>
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/IMG_5889_.PNG)
+![](/pictures/IMG_5889_.PNG)
 
 Keep cleaning the pads, and keep going. 
 
 Now starting to solder components on the TOP side of the board, right side from SATA port:<br>
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/IMG_5890_.PNG)
+![](/pictures/IMG_5890_.PNG)
 
 Right side from SATA port is completed, all components soldered:
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/IMG_5894_.PNG)
+![](/pictures/IMG_5894_.PNG)
 
 
 Left side from SATA port is completed, all components are soldered. Yes I missed one cap and thats intentional -- I didnt wanted to take any risk and melt the SATA port, cap is just too close to it. So I skipped C377 and placed C379 to its place:<br>
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/IMG_5896_.PNG)
+![](/pictures/IMG_5896_.PNG)
 
 ## SOLDERING COMPLETED
 Board view from the TOP, with marker of R150 location:<br>
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/completed_view_.jpeg)
+![](/pictures/completed_view_.jpeg)
 <br><br>
 ## CHECKING BIOS
 
 Main view of my M920Q machine:<br>
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/bios_view_1.jpeg)
+![](/pictures/bios_view_1.jpeg)
 
 Main > System Summary > Here you go -- 2 NVME drives:<BR>
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/bios_view_2.jpeg)
+![](/pictures/bios_view_2.jpeg)
 
 ## BOOTING UBUNTU AND CHECKING IF ALL GOOD - OH YES IT IS!
-![](https://github.com/badger707/m920q-dual-NVME/blob/main/pictures/nvme_list_and_lshw_.png)
+![](/pictures/nvme_list_and_lshw_.png)
 <br><br>
 
 # TROUBLESHOOTING
